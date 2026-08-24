@@ -1,0 +1,38 @@
+.about {
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.heading {
+  font-size: var(--fs-h1);
+  color: var(--color-fg);
+  margin-top: 1rem;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+  padding-top: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.paragraph {
+  font-size: var(--fs-body-lg);
+  font-weight: 300;
+  color: var(--color-fg-muted);
+  line-height: 1.65;
+  max-width: 46ch;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}

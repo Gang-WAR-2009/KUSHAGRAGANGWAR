@@ -1,0 +1,87 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--gutter);
+  overflow: hidden;
+  perspective: 1400px;
+}
+
+/* Soft ambient glow that drifts subtly with the cursor */
+.glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    600px circle at var(--glow-x, 50%) var(--glow-y, 40%),
+    rgba(201, 183, 142, 0.07),
+    transparent 65%
+  );
+  transition: opacity 0.6s var(--ease-out-quart);
+}
+
+.eyebrowRow {
+  position: absolute;
+  top: clamp(1.5rem, 5vh, 3rem);
+  left: var(--gutter);
+  right: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleWrap {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  text-align: center;
+  color: var(--color-fg);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.scrollCue {
+  position: absolute;
+  bottom: clamp(1.5rem, 5vh, 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-fg-muted);
+  font-size: var(--fs-small);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-fg-muted),
+    transparent
+  );
+}
+
+@media (max-width: 640px) {
+  .title {
+    letter-spacing: -0.03em;
+  }
+  .eyebrowRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
