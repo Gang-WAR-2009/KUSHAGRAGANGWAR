@@ -46,7 +46,7 @@ export const projects = [
     id: 4,
     title: 'Project Four',
     category: 'Placeholder',
-    image: '/images/AIimage.png',
+    image: '/images/mybuddy.png',
     description: 'Placeholder — describe what this project is, what it does, and the core technology behind it.',
     whyBuilt: 'Placeholder — describe the motivation behind this project and what you wanted to learn.',
     challenges: 'Placeholder — describe the hardest engineering problem you solved while building this.',
