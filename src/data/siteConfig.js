@@ -11,6 +11,7 @@ export const siteConfig = {
   // Shown in the browser tab and social share previews.
   siteTitle: 'Gangwar — Portfolio',
   siteDescription: 'Personal portfolio and project archive.',
+  baseUrl: import.meta.env.BASE_URL,
 
   // ABOUT ME
   // Supports multiple paragraphs — just add more strings to the array.
